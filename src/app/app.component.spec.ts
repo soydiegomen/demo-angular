@@ -26,10 +26,11 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('angular-demo');
   });
 
-  it('should render title', () => {
+  //Este test ya no aplica ya que se cambio el contenido del template
+  /* it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('angular-demo app is running!');
-  });
+  }); */
 });
