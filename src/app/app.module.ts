@@ -6,8 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './screens/home/home.component';
 import { MyCounterComponent } from './blocks/my-counter/my-counter.component';
-import { counterReducer } from './counter.reducer';
 import { ResultCounterComponent } from './blocks/result-counter/result-counter.component';
+import { counterReducer } from './counter.reducer';
+import { booksReducer } from './state/books.reducer';
+import { collectionReducer } from './state/collection.reducer';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { ResultCounterComponent } from './blocks/result-counter/result-counter.c
   imports: [
     BrowserModule,
     AppRoutingModule,
+    StoreModule.forRoot({ books: booksReducer, collection: collectionReducer }),
     StoreModule.forRoot({ count: counterReducer })
   ],
   providers: [],
