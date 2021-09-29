@@ -3,21 +3,21 @@ pipeline {
 
   
   stages{
-    stage('Informar inicio de deploy'){
+    stage('Deploy'){
       steps{
-        echo '#inicio de deploy'
+        echo '#Deploing'
       }
     }
 
-    stage('Publicar'){
+    stage('Publish'){
       steps{
-        echo '#Publicando los cambios'
+        echo '#publishing changes'
       }
     }
 
-    stage('Actualizar librerias'){
+    stage('Update libraries'){
       steps{
-        echo '#Actualizando librerias del proyecto'
+        echo '#Updating libraries'
       }
     }
   }
